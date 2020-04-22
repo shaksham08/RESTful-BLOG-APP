@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+  </head>
+  <body>
+    <div class="ui fixed inverted menu">
+      <div class="ui container">
+        <div class="header item"><i class="code icon"></i> Blog Site</div>
+        <a class="item" href="/">Home</a>
+        <a class="item" href="/blogs/new">New Post</a>
+      </div>
+    </div>
+    <div class="ui main text container segment">
+      <div class="ui huge header"><%= blog.title %></div>
+      <div class="ui top attached">
+        <div class="item">
+          <img class="ui centered rounded image" src="<%= blog.image %>" />
+          <div class="content">
+            <span><%= blog.created.toDateString() %></span>
+          </div>
+          <div class="description">
+            <p><%- blog.body %></p>
+          </div>
+          <a class="ui orange basic button" href="/blogs/<%= blog._id %>/edit"
+            >Edit</a
+          >
+          <form
+            id="delete"
+            action="/blogs/<%= blog._id %>?_method=DELETE"
+            method="POST"
+          >
+            <button class="ui red basic button">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

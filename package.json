@@ -1,0 +1,28 @@
+{
+  "name": "restful-blog-app",
+  "version": "1.0.0",
+  "description": "This is a blog which shows us the working of the RESTful Routes",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaksham08/RESTful-BLOG-APP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaksham08/RESTful-BLOG-APP/issues"
+  },
+  "homepage": "https://github.com/shaksham08/RESTful-BLOG-APP#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-sanitizer": "^1.0.5",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.9.10",
+    "nodemon": "^2.0.3"
+  }
+}
